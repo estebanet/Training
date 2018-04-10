@@ -1,0 +1,15 @@
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\bin\Debug\Leccion1_Implementado Multitareas.exe.config
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\bin\Debug\Leccion1_Implementado Multitareas.exe
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\bin\Debug\Leccion1_Implementado Multitareas.pdb
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas.csprojResolveAssemblyReference.cache
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\MainWindow.g.cs
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\App.g.cs
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas_MarkupCompile.cache
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas_MarkupCompile.lref
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\MainWindow.baml
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas.g.resources
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado_Multitareas.Properties.Resources.resources
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas.csproj.GenerateResource.Cache
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas.csproj.CoreCompileInputs.cache
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas.exe
+C:\Users\esteb\Documents\Visual Studio 2017\Proyectos\TaskParallelLibrary-Training\Leccion1_Implementado Multitareas\obj\Debug\Leccion1_Implementado Multitareas.pdb

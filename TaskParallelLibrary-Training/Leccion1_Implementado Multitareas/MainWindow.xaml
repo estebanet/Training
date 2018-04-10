@@ -1,0 +1,28 @@
+﻿<Window x:Class="Leccion1_Implementado_Multitareas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Leccion1_Implementado_Multitareas"
+        mc:Ignorable="d"
+        Title="Leccion1" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Name="Messages" Grid.Row="0" Background="Azure"></Label>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" 
+                    HorizontalAlignment="Center">
+            <Button Name="StartTask" Content="Iniciar Tarea"
+                    Margin="10" Padding="10" ToolTip="Inicie una operación de larga duración"
+                    Click="StartTask_Click"></Button>
+            <Button Name="CancelTask" Content="Cancelar Tarea"
+                    Margin="10" Padding="10" ToolTip="Cancele una operación de larga duración"
+                    Click="CancelTask_Click"></Button>
+            <Button Name="ShowTaskStatus" Content="Mostrar Estatus"
+                    Margin="10" Padding="10" ToolTip="Muestra el estatus de la tarea en ejecución"
+                    Click="ShowTaskStatus_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
