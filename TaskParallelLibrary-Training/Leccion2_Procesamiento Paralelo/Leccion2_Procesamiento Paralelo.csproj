@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NorthWind">
+      <HintPath>H:\Archivos GaRo\Entrenamientos .NET\TASK PARALLEL LIBRARY\Módulo - Mejorando el rendimiento y tiempo de respuesta de una aplicación\M_L2_1_Laboratorio 2 Ejecutando tareas en paralelo\NorthWind.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

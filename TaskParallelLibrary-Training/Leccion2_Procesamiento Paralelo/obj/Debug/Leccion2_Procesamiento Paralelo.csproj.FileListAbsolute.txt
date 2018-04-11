@@ -4,3 +4,4 @@ C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion2_P
 C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion2_Procesamiento Paralelo\obj\Debug\Leccion2_Procesamiento Paralelo.csprojResolveAssemblyReference.cache
 C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion2_Procesamiento Paralelo\obj\Debug\Leccion2_Procesamiento Paralelo.exe
 C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion2_Procesamiento Paralelo\obj\Debug\Leccion2_Procesamiento Paralelo.pdb
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion2_Procesamiento Paralelo\bin\Debug\NorthWind.dll
