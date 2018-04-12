@@ -14,12 +14,13 @@ namespace Leccion2_Procesamiento_Paralelo
         {
             //RunParallelTasks();
             //ParallelLopIterate();
-            RunLINQ();
-            RunPLINQ();
+            //RunLINQ();
+            //RunPLINQ();
+            RunContinuationTask();
             Console.WriteLine("Presione <enter> para finalizar");
             Console.ReadLine();
 
-            //Continuar con Ejercicio 2 Enlazando Tareas - Tarea 1 Crear tareas de continuación.
+            //Continuar con Ejercicio 2 Enlazando Tareas - Tarea 2 Crear tareas anidadas.
         }
 
         static void RunParallelTasks()
@@ -87,6 +88,34 @@ namespace Leccion2_Procesamiento_Paralelo
             });
             swObj.Stop();
             Console.WriteLine($"Número de ticks transcurridos después de la consulta (con PLINQ): {swObj.ElapsedTicks}");
+        }
+
+        static List<string> GetProductNames()
+        {
+            Thread.Sleep(3000);
+            return NorthWind.Repository.Products
+                .Select(product => product.ProductName).ToList();
+        }
+
+        static void RunContinuationTask()
+        {
+            Task<int> secondTask = Task.Run<List<string>>(new Func<List<string>>(GetProductNames))
+                .ContinueWith<int>(antecedentTask =>
+            {
+                return ProcessData(antecedentTask.Result);
+            });
+
+            Console.WriteLine($"Número de nombres de producto procesados: {secondTask.Result}");
+        }
+
+        static int ProcessData(List<string> ProductNames)
+        {
+            foreach(string ProductName in ProductNames)
+            {
+                Console.WriteLine(ProductName);
+            }
+
+            return ProductNames.Count;
         }
     }
 }
