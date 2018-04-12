@@ -16,11 +16,12 @@ namespace Leccion2_Procesamiento_Paralelo
             //ParallelLopIterate();
             //RunLINQ();
             //RunPLINQ();
-            RunContinuationTask();
+            //RunContinuationTask();
+            RunNestedTasks();
             Console.WriteLine("Presione <enter> para finalizar");
             Console.ReadLine();
 
-            //Continuar con Ejercicio 2 Enlazando Tareas - Tarea 2 Crear tareas anidadas.
+            //Continuar con Ejercicio 3 Manejo de excepciones en tareas - Tarea 1 Atrapar excepciones de Tareas.
         }
 
         static void RunParallelTasks()
@@ -99,13 +100,18 @@ namespace Leccion2_Procesamiento_Paralelo
 
         static void RunContinuationTask()
         {
-            Task<int> secondTask = Task.Run<List<string>>(new Func<List<string>>(GetProductNames))
-                .ContinueWith<int>(antecedentTask =>
+            Task<List<string>> firstTask = new Task<List<string>>(new Func<List<string>>(GetProductNames));
+                
+
+            Task<int> secondTask  = firstTask.ContinueWith<int>(antecedentTask =>
             {
                 return ProcessData(antecedentTask.Result);
             });
 
-            Console.WriteLine($"Número de nombres de producto procesados: {secondTask.Result}");
+            Task.Run(() =>
+            Console.WriteLine($"Número de nombres de producto procesados: {secondTask.Result}"));
+
+            firstTask.Start();
         }
 
         static int ProcessData(List<string> ProductNames)
@@ -116,6 +122,23 @@ namespace Leccion2_Procesamiento_Paralelo
             }
 
             return ProductNames.Count;
+        }
+
+        static void RunNestedTasks()
+        {
+            Task outerTask = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine("Iniciando tarea \"externa\"");
+                Task innerTask = Task.Factory.StartNew(() =>
+                {
+                    Console.WriteLine("Iniciando tarea \"interna\"");
+                    Thread.Sleep(3000);
+                    Console.WriteLine("Por finalizar tarea \"interna\"");
+                }, TaskCreationOptions.AttachedToParent);
+            });
+
+            outerTask.Wait();
+            Console.WriteLine("Tarea \"externa\" finalizada");
         }
     }
 }
