@@ -17,7 +17,8 @@ namespace Leccion2_Procesamiento_Paralelo
             //RunLINQ();
             //RunPLINQ();
             //RunContinuationTask();
-            RunNestedTasks();
+            //RunNestedTasks();
+            HandleTaskExceptions();
             Console.WriteLine("Presione <enter> para finalizar");
             Console.ReadLine();
 
@@ -139,6 +140,75 @@ namespace Leccion2_Procesamiento_Paralelo
 
             outerTask.Wait();
             Console.WriteLine("Tarea \"externa\" finalizada");
+        }
+
+        static void RunLongTask(CancellationToken ct)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Thread.Sleep(2000);
+                ct.ThrowIfCancellationRequested();
+            }
+        }
+
+        static void HandleTaskExceptions()
+        {
+            CancellationTokenSource cts = new CancellationTokenSource();
+            CancellationToken ct = cts.Token;
+            Task LongTask = null;
+
+            //Task.Run(() => { LongTask = new Task(() => RunLongTask(ct), ct); }).Wait();
+            //Task.Run(() => LongTask.Start());
+            LongTask = Task.Run(() => RunLongTask(ct), ct);
+            Task.Run(() =>
+            {
+                try
+                {
+                    LongTask.Wait();
+                }
+                catch (AggregateException ae)
+                {
+                    foreach (var InnerException in ae.InnerExceptions)
+                    {
+                        if (InnerException is TaskCanceledException)
+                        {
+                            Console.WriteLine("Tarea cancelada en thread secundario...");
+                        }
+                        else
+                        {
+                            Console.WriteLine(InnerException.Message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Excepción desconocida: " + ex.Message);
+                }
+            });
+            Task.Run(() => { Thread.Sleep(2000); cts.Cancel(); });
+
+            //try
+            //{
+            //    LongTask.Wait();
+            //}
+            //catch (AggregateException ae)
+            //{
+            //    foreach (var InnerException in ae.InnerExceptions)
+            //    {
+            //        if (InnerException is TaskCanceledException)
+            //        {
+            //            Console.WriteLine("Tarea cancelada...");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine(InnerException.Message);
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Excepción desconocida: " + ex.Message);
+            //}
         }
     }
 }
