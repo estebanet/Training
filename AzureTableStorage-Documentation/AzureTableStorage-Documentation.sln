@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft-Azure-Table-Storage-Emulator", "Microsoft-Azure-Table-Storage-Emulator\Microsoft-Azure-Table-Storage-Emulator.csproj", "{1E4294D6-DF3F-4B31-8A73-89E7EC56DD38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft-Azure-Table-Storage", "Microsoft-Azure-Table-Storage\Microsoft-Azure-Table-Storage.csproj", "{7C08FD4C-276C-4A36-8E10-DBC2733778CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1E4294D6-DF3F-4B31-8A73-89E7EC56DD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E4294D6-DF3F-4B31-8A73-89E7EC56DD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E4294D6-DF3F-4B31-8A73-89E7EC56DD38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C08FD4C-276C-4A36-8E10-DBC2733778CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C08FD4C-276C-4A36-8E10-DBC2733778CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C08FD4C-276C-4A36-8E10-DBC2733778CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C08FD4C-276C-4A36-8E10-DBC2733778CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
