@@ -1,0 +1,14 @@
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\bin\Debug\Leccion3_Utilizando el Objeto Dispatcher.exe.config
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\bin\Debug\Leccion3_Utilizando el Objeto Dispatcher.exe
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\bin\Debug\Leccion3_Utilizando el Objeto Dispatcher.pdb
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando el Objeto Dispatcher.csprojResolveAssemblyReference.cache
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\MainWindow.g.cs
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\App.g.cs
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando el Objeto Dispatcher_MarkupCompile.cache
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando el Objeto Dispatcher_MarkupCompile.lref
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\MainWindow.baml
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando el Objeto Dispatcher.g.resources
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando_el_Objeto_Dispatcher.Properties.Resources.resources
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando el Objeto Dispatcher.csproj.GenerateResource.Cache
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando el Objeto Dispatcher.exe
+C:\Esteban García Rosas\Github\Training\TaskParallelLibrary-Training\Leccion3_Utilizando el Objeto Dispatcher\obj\Debug\Leccion3_Utilizando el Objeto Dispatcher.pdb
