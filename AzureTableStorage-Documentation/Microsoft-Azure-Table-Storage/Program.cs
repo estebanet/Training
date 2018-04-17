@@ -13,6 +13,85 @@ namespace Microsoft_Azure_Table_Storage
     {
         static void Main(string[] args)
         {
+            try
+            {
+                var consulta =
+                    ObtenEquipo("Cruz Azul");
+                    //ObtenEquiposConMasDe7Campeonatos();
+                //ObtenEquipos();
+                //foreach (Modelo.Equipo equipo in consulta)
+                //{
+                    Console.WriteLine($"Nombre: {consulta.RowKey}, " +
+                        $"Apodo: {consulta.Apodo}, Campeonatos: {consulta.NoCampeonatos}, " +
+                        $"Fundación: {consulta.Fundacion.ToShortDateString()}");
+                //}
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Se ha producido la siguiente excepción: {ex.Message}");
+            }
+
+            Console.WriteLine("Presione <enter> para continuar");
+            Console.ReadLine();
+        }
+
+        static Modelo.Equipo ObtenEquipo(string nombre, string liga = "Liga MX")
+        {
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
+                CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
+
+            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+
+            CloudTable cloudTable = tableClient.GetTableReference("CosasParaBorrarTable");
+
+            TableOperation tableOperation = TableOperation.Retrieve<Modelo.Equipo>(liga, nombre);
+
+            var equipo = cloudTable.Execute(tableOperation);
+
+            return equipo.Result as Modelo.Equipo;
+        }
+
+        static List<Modelo.Equipo> ObtenEquiposConMasDe7Campeonatos()
+        {
+            CloudStorageAccount storageAccount =
+                CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
+
+            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+
+            CloudTable cloudTable = tableClient.GetTableReference("CosasParaBorrarTable");
+
+            TableQuery<Modelo.Equipo> queryEquipos = new TableQuery<Modelo.Equipo>()
+                .Where(TableQuery.CombineFilters(
+                    TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Liga MX"),
+                    TableOperators.And,
+                    TableQuery.GenerateFilterConditionForInt("NoCampeonatos", QueryComparisons.GreaterThan, 7)));
+
+            var tableStorageQuery = 
+                cloudTable.ExecuteQuery<Modelo.Equipo>(queryEquipos).ToList();
+
+            return tableStorageQuery;
+        }
+
+        static List<Modelo.Equipo> ObtenEquipos()
+        {
+            CloudStorageAccount storageAccount = 
+                CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
+
+            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+
+            CloudTable cloudTable = tableClient.GetTableReference("CosasParaBorrarTable");
+
+            TableQuery<Modelo.Equipo> queryEquipos =
+                new TableQuery<Modelo.Equipo>()
+                    .Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Liga MX"));
+
+            var tableStorageQuery = cloudTable.ExecuteQuery<Modelo.Equipo>(queryEquipos).ToList();
+
+            return tableStorageQuery;
+        }
+
+        static void InsertSingleEntityAndBatchOperation()
+        {
             CloudStorageAccount storageAccount =
                 CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
 
