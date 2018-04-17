@@ -1,0 +1,16 @@
+﻿<Window x:Class="Leccion3_Utilizando_async_y_await.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Leccion3_Utilizando_async_y_await"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label Name="lblResult"></Label>
+            <Button Name="btnResult" Click="btnResult_Click">Obtener Resultado</Button>
+            <Button Name="btnTest" Click="btnTest_Click">Test async operations</Button>
+        </StackPanel>
+    </Grid>
+</Window>
