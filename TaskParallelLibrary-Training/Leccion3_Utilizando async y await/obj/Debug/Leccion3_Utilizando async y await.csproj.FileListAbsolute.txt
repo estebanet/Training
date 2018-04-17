@@ -1,0 +1,15 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\bin\Debug\Leccion3_Utilizando async y await.exe.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\bin\Debug\Leccion3_Utilizando async y await.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\bin\Debug\Leccion3_Utilizando async y await.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\MainWindow.g.cs
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\App.g.cs
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await_MarkupCompile.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await_MarkupCompile.lref
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\MainWindow.baml
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await.g.resources
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando_async_y_await.Properties.Resources.resources
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await.csproj.GenerateResource.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Utilizando async y await\obj\Debug\Leccion3_Utilizando async y await.pdb
