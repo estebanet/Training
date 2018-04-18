@@ -15,16 +15,18 @@ namespace Microsoft_Azure_Table_Storage
         {
             try
             {
-                var consulta =
-                    ObtenEquipo("Cruz Azul");
-                    //ObtenEquiposConMasDe7Campeonatos();
-                //ObtenEquipos();
+                //var consulta =
+                //    //ObtenEquipo("Cruz Azul");
+                ////ObtenEquiposConMasDe7Campeonatos();
+                //ObtenEquipoConMasDe5Campeonatos("CosasParaBorrarTable");
+                ////ObtenEquipos();
                 //foreach (Modelo.Equipo equipo in consulta)
                 //{
-                    Console.WriteLine($"Nombre: {consulta.RowKey}, " +
-                        $"Apodo: {consulta.Apodo}, Campeonatos: {consulta.NoCampeonatos}, " +
-                        $"Fundación: {consulta.Fundacion.ToShortDateString()}");
+                //    Console.WriteLine($"Nombre: {equipo.RowKey}, " +
+                //        $"Apodo: {equipo.Apodo}, Campeonatos: {equipo.NoCampeonatos}, " +
+                //        $"Fundación: {equipo.Fundacion.ToShortDateString()}");
                 //}
+                InsertaEquipoIngles("CosasParaBorrarTable");
             }
             catch (Exception ex)
             {
@@ -33,6 +35,56 @@ namespace Microsoft_Azure_Table_Storage
 
             Console.WriteLine("Presione <enter> para continuar");
             Console.ReadLine();
+        }
+
+        static void InsertaEquipoIngles(string Tabla, string liga = "Liga Premier")
+        {
+            CloudStorageAccount account = CloudStorageAccount.
+                Parse(CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
+            CloudTableClient client = account.CreateCloudTableClient();
+            CloudTable table = client.GetTableReference(Tabla);
+
+            Modelo.EquipoIngles equipoIngles = new Modelo.EquipoIngles
+            {
+                Copas = 15,
+                Liga = liga,
+                Nombre = "Manchester United"
+            };
+
+            Modelo.Equipo equipoMexicano = new Modelo.Equipo("Lobos UAP", "Liga MX");
+            equipoMexicano.Apodo = "Lobos";
+            equipoMexicano.Fundacion = DateTime.Today;
+            equipoMexicano.IdEquipo = 30;
+            equipoMexicano.NoCampeonatos = 0;
+
+            List<TableOperation> operacionesTabla = new List<TableOperation>
+            {
+                TableOperation.Insert(equipoIngles),
+                TableOperation.Insert(equipoMexicano)
+            };
+
+            //var result1 = table.Execute(operacionesTabla[0]);
+            var result2 = table.Execute(operacionesTabla[1]);
+
+        }
+
+        static List<Modelo.Equipo> ObtenEquipoConMasDe5Campeonatos(string Tabla, string liga = "Liga MX")
+        {
+            CloudStorageAccount storageAccount =
+                CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
+            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+            CloudTable cloudTable = tableClient.GetTableReference(Tabla);
+
+            TableQuery<Modelo.Equipo> queryTable = new TableQuery<Modelo.Equipo>().Where(
+                TableQuery.CombineFilters(
+                TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, liga),
+                TableOperators.And,
+                TableQuery.GenerateFilterConditionForInt("NoCampeonatos", QueryComparisons.GreaterThanOrEqual, 5)
+                ));
+
+            List<Modelo.Equipo> equipos = cloudTable.ExecuteQuery(queryTable).ToList();
+
+            return equipos;
         }
 
         static Modelo.Equipo ObtenEquipo(string nombre, string liga = "Liga MX")
