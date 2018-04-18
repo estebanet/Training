@@ -1,0 +1,15 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\bin\Debug\Leccion3_Creando Metodos Esperables.exe.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\bin\Debug\Leccion3_Creando Metodos Esperables.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\bin\Debug\Leccion3_Creando Metodos Esperables.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\MainWindow.g.cs
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\App.g.cs
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables_MarkupCompile.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables_MarkupCompile.lref
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\MainWindow.baml
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables.g.resources
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando_Metodos_Esperables.Properties.Resources.resources
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables.csproj.GenerateResource.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion3_Creando Metodos Esperables\obj\Debug\Leccion3_Creando Metodos Esperables.pdb
