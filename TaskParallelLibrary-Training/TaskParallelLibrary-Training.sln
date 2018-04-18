@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Utilizando async y
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Creando Metodos Esperables", "Leccion3_Creando Metodos Esperables\Leccion3_Creando Metodos Esperables.csproj", "{053B9713-55AF-40B6-B347-2FAA1446F061}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Creando e Invocando Metodos Callback", "Leccion3_Creando e Invocando Metodos Callback\Leccion3_Creando e Invocando Metodos Callback.csproj", "{C29871BA-6417-41BA-A7CE-767122E6DD4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{053B9713-55AF-40B6-B347-2FAA1446F061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{053B9713-55AF-40B6-B347-2FAA1446F061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{053B9713-55AF-40B6-B347-2FAA1446F061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29871BA-6417-41BA-A7CE-767122E6DD4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29871BA-6417-41BA-A7CE-767122E6DD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29871BA-6417-41BA-A7CE-767122E6DD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29871BA-6417-41BA-A7CE-767122E6DD4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
