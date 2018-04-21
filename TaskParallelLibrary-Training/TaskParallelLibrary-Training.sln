@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Creando Metodos Es
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Creando e Invocando Metodos Callback", "Leccion3_Creando e Invocando Metodos Callback\Leccion3_Creando e Invocando Metodos Callback.csproj", "{C29871BA-6417-41BA-A7CE-767122E6DD4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Trabajando con Operaciones APM", "Leccion3_Trabajando con Operaciones APM\Leccion3_Trabajando con Operaciones APM.csproj", "{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C29871BA-6417-41BA-A7CE-767122E6DD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C29871BA-6417-41BA-A7CE-767122E6DD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C29871BA-6417-41BA-A7CE-767122E6DD4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
