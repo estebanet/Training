@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Creando e Invocand
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Trabajando con Operaciones APM", "Leccion3_Trabajando con Operaciones APM\Leccion3_Trabajando con Operaciones APM.csproj", "{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Manejando excepciones en Awaitable Method", "Leccion3_Manejando excepciones en Awaitable Method\Leccion3_Manejando excepciones en Awaitable Method.csproj", "{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A1BD87F-54FE-4B1D-B313-BF6E7D7FD0E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
