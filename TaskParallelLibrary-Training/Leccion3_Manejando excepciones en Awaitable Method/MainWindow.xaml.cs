@@ -25,63 +25,110 @@ namespace Leccion3_Manejando_excepciones_en_Awaitable_Method
         public MainWindow()
         {
             InitializeComponent();
+            TaskScheduler.UnobservedTaskException += TaskScheduler_UnobservedTaskException;
 
             //Continuar con excepciones no observadas - Lección 3 - Manejando excepciones en métodos esperables.
         }
 
-        private async void GetWebContent_Click(object sender, RoutedEventArgs e)
+        private void TaskScheduler_UnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs e)
         {
-            using (WebClient webClientObj = new WebClient())
+            foreach (var exception in e.Exception.InnerExceptions)
             {
-                Task<string> result = null;
-                try
+                Result.Dispatcher.Invoke(() =>
                 {
-
-                    //string resultado = await Task.Run<string>(() => { Thread.Sleep(3000); throw new Exception("Fail"); return "Hola :)"; });
-
-                    //result = webClientObj.DownloadStringTaskAsync("http://ticapacitacion.com2");
-
-                    //var contentString = await result;
-
-                    var resultadoT = GetStringAsync();
-
-                    Result.Content = await resultadoT;
-
-                    //var content = result.Result; No funciona
-
-                    //Task.WaitAll(result); No funciona
-
-                }
-                catch (WebException we)
-                {
-                    Result.Content = $"Se ha generado una excepción: {we.Message}, " +
-                        $"Estatus de Task: {result?.Status}";
-                }
-                catch (AggregateException ae)
-                {
-                    Result.Content = "Excepción manejada de tipo AggregateException";
-                }
-                catch (Exception ex)
-                {
-                    Result.Content = $"Excepción manejada de tipo Exception; Error: {ex.Message}";
-                }
+                    Result.Content += $"{Environment.NewLine}{exception.Message}";
+                });
             }
+
+            e.SetObserved();
+        }
+
+        private void GetWebContent_Click(object sender, RoutedEventArgs e)
+        {
+            //using (WebClient webClientObj = new WebClient())
+            //{
+            //Task<string> resultadoT = null;
+            //try
+            //{
+
+            //string resultado = await Task.Run<string>(() => { Thread.Sleep(3000); throw new Exception("Fail"); return "Hola :)"; });
+
+            //result = webClientObj.DownloadStringTaskAsync("http://ticapacitacion.com2");
+
+            //var contentString = await result;
+
+            //GetStringAsync2();
+
+            Task.Run(async () =>
+            {
+
+                string resultado = string.Empty;
+                string t2;
+                //var t1= Task.Run(() => { throw new Exception("Fail"); return "Hola :)"; });
+                using (WebClient wc = new WebClient())
+                {
+                    t2 = await wc.DownloadStringTaskAsync("http://www.capacitacion.com2");
+                }
+                //resultado = await t1;
+
+                resultado += t2;
+                //resultado = await t1;
+
+                return resultado;
+
+            });
+
+            //resultadoT.Wait();
+
+            //Result.Content = await resultadoT;
+
+            //var content = result.Result; No funciona
+
+            //Task.WaitAll(result); No funciona
+
+            //}
+            //catch (WebException we)
+            //{
+            //    Result.Content = $"Se ha generado una excepción: {we.Message}, " +
+            //        $"Estatus de Task:";
+            //}
+            //catch (AggregateException ae)
+            //{
+            //    Result.Content = "Excepción manejada de tipo AggregateException";
+            //}
+            //catch (Exception ex)
+            //{
+            //    Result.Content = $"Excepción manejada de tipo Exception; Error: {ex.Message}";
+            //}
+            //Thread.Sleep(6000);
+            //resultadoT = null;
+            Thread.Sleep(3000);
+                GC.WaitForPendingFinalizers();
+                GC.Collect();
+                Result.Content += "Tarea finalizada";
+            //}
         }
 
         public async Task<string> GetStringAsync()
         {
             string resultado = string.Empty;
-
-            var t1= Task.Run(() => { Thread.Sleep(3000); throw new Exception("Fail"); return "Hola :)"; });
-            var t2 = Task.Run(() => { Thread.Sleep(1000); throw new Exception("Fail 2"); return "Hola :)"; });
-
+            string t2;
+            //var t1= Task.Run(() => { throw new Exception("Fail"); return "Hola :)"; });
+            using (WebClient wc = new WebClient())
+            {
+                t2 = await wc.DownloadStringTaskAsync("http://www.capacitacion.com2");
+            }
             //resultado = await t1;
 
-            resultado += await t2;
-
-            resultado = await t1;
+            resultado += t2;
+            //resultado = await t1;
 
             return resultado;
+        }
+
+        public Task<string> GetStringAsync2()
+        {
+            return Task.Run(async () => { return await GetStringAsync(); });
         }
     }
 }
