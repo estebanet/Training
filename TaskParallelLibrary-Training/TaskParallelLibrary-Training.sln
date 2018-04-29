@@ -19,6 +19,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Trabajando con Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion3_Manejando excepciones en Awaitable Method", "Leccion3_Manejando excepciones en Awaitable Method\Leccion3_Manejando excepciones en Awaitable Method.csproj", "{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion4_Utilizando Bloqueos", "Leccion4_Utilizando Bloqueos\Leccion4_Utilizando Bloqueos.csproj", "{E0423154-6AFF-4CB0-9BE5-4F1E7E21C9EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion4_Utilizando Bloqueos_WcfSample", "Leccion4_Utilizando Bloqueos_WcfSample\Leccion4_Utilizando Bloqueos_WcfSample.csproj", "{671F997C-85AC-424F-8DD0-43E95C89F76D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{67DC8CA0-B9F9-4238-BCA9-DED8AF33C09D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion4_Utilizando Bloqueos_WcfClienteSample", "Leccion4_Utilizando Bloqueos_WcfClienteSample\Leccion4_Utilizando Bloqueos_WcfClienteSample.csproj", "{F8B9E773-FC7F-4DEB-B705-D5CE767C6F11}"
+	ProjectSection(ProjectDependencies) = postProject
+		{671F997C-85AC-424F-8DD0-43E95C89F76D} = {671F997C-85AC-424F-8DD0-43E95C89F76D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,9 +68,25 @@ Global
 		{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACA5029A-616C-4C71-B285-8F9AC8ABFAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0423154-6AFF-4CB0-9BE5-4F1E7E21C9EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0423154-6AFF-4CB0-9BE5-4F1E7E21C9EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0423154-6AFF-4CB0-9BE5-4F1E7E21C9EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0423154-6AFF-4CB0-9BE5-4F1E7E21C9EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671F997C-85AC-424F-8DD0-43E95C89F76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671F997C-85AC-424F-8DD0-43E95C89F76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671F997C-85AC-424F-8DD0-43E95C89F76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671F997C-85AC-424F-8DD0-43E95C89F76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B9E773-FC7F-4DEB-B705-D5CE767C6F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B9E773-FC7F-4DEB-B705-D5CE767C6F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B9E773-FC7F-4DEB-B705-D5CE767C6F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B9E773-FC7F-4DEB-B705-D5CE767C6F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{671F997C-85AC-424F-8DD0-43E95C89F76D} = {67DC8CA0-B9F9-4238-BCA9-DED8AF33C09D}
+		{F8B9E773-FC7F-4DEB-B705-D5CE767C6F11} = {67DC8CA0-B9F9-4238-BCA9-DED8AF33C09D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C75D8219-1E58-4DAA-9566-A1AC4FFB66BA}

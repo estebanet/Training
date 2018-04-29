@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Usuarios" EntityType="Model1.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sesions" EntityType="Model1.Store.Sesions" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UsuarioSesion" Association="Model1.Store.UsuarioSesion">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Sesion" EntitySet="Sesions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UltimaSesion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sesions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UsuarioSesion">
+    <End Role="Usuario" Type="Model1.Store.Usuarios" Multiplicity="1" />
+    <End Role="Sesion" Type="Model1.Store.Sesions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sesion">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

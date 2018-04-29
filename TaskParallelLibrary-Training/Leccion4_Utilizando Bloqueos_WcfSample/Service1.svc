@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Leccion4_Utilizando_Bloqueos_WcfSample.Service1" CodeBehind="Service1.svc.cs" %>
