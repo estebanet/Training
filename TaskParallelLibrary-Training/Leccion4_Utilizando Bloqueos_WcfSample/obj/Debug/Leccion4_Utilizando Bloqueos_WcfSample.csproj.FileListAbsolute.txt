@@ -1,0 +1,12 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\bin\Leccion4_Utilizando Bloqueos_WcfSample.dll.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\bin\Leccion4_Utilizando Bloqueos_WcfSample.dll
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\bin\Leccion4_Utilizando Bloqueos_WcfSample.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\bin\EntityFramework.dll
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\bin\EntityFramework.SqlServer.dll
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\bin\EntityFramework.xml
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\bin\EntityFramework.SqlServer.xml
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\obj\Debug\Leccion4_Utilizando Bloqueos_WcfSample.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\obj\Debug\Leccion4_Utilizando Bloqueos_WcfSample.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\obj\Debug\Leccion4_Utilizando Bloqueos_WcfSample.csproj.CopyComplete
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\obj\Debug\Leccion4_Utilizando Bloqueos_WcfSample.dll
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Bloqueos_WcfSample\obj\Debug\Leccion4_Utilizando Bloqueos_WcfSample.pdb

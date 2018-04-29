@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Usuarios" EntityType="Model1.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sesions" EntityType="Model1.Store.Sesions" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UsuarioSesion" Association="Model1.Store.UsuarioSesion">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Sesion" EntitySet="Sesions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UltimaSesion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sesions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UsuarioSesion">
+    <End Role="Usuario" Type="Model1.Store.Usuarios" Multiplicity="1" />
+    <End Role="Sesion" Type="Model1.Store.Sesions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sesion">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Usuarios" EntityType="Model1.Usuario" />
+          <EntitySet Name="Sesions" EntityType="Model1.Sesion" />
+          <AssociationSet Name="UsuarioSesion" Association="Model1.UsuarioSesion">
+            <End Role="Usuario" EntitySet="Usuarios" />
+            <End Role="Sesion" EntitySet="Sesions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="UltimaSesion" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Sesions" Relationship="Model1.UsuarioSesion" FromRole="Usuario" ToRole="Sesion" />
+        </EntityType>
+        <EntityType Name="Sesion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="Model1.UsuarioSesion" FromRole="Sesion" ToRole="Usuario" />
+          <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="UsuarioSesion">
+          <End Type="Model1.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="Model1.Sesion" Role="Sesion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sesion">
+              <PropertyRef Name="UsuarioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Usuario)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="UltimaSesion" ColumnName="UltimaSesion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sesions">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Sesion)">
+        <MappingFragment StoreEntitySet="Sesions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
