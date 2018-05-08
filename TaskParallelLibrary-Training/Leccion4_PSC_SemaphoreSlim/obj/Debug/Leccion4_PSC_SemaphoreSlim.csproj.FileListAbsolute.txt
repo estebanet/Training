@@ -1,0 +1,7 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_SemaphoreSlim\bin\Debug\Leccion4_PSC_SemaphoreSlim.exe.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_SemaphoreSlim\bin\Debug\Leccion4_PSC_SemaphoreSlim.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_SemaphoreSlim\bin\Debug\Leccion4_PSC_SemaphoreSlim.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_SemaphoreSlim\obj\Debug\Leccion4_PSC_SemaphoreSlim.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_SemaphoreSlim\obj\Debug\Leccion4_PSC_SemaphoreSlim.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_SemaphoreSlim\obj\Debug\Leccion4_PSC_SemaphoreSlim.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_SemaphoreSlim\obj\Debug\Leccion4_PSC_SemaphoreSlim.pdb
