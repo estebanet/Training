@@ -31,9 +31,9 @@ namespace Leccion4_PSC_CountDownEvent
                 {
                     Console.WriteLine($"Hilo {Thread.CurrentThread.ManagedThreadId}, Procesando pedido: {Order}");
                     Thread.Sleep(1000);
+                    Console.WriteLine($"Pedido {Order} procesado, Hilo {Thread.CurrentThread.ManagedThreadId}!");
                     ProcessOrders++;
                     CDE.Signal();
-                    Console.WriteLine($"Pedido {Order} procesado, Hilo {Thread.CurrentThread.ManagedThreadId}!");
                 }
 
                 Console.WriteLine($"Hilo {Thread.CurrentThread.ManagedThreadId}, pedidos procesados {ProcessOrders}");
