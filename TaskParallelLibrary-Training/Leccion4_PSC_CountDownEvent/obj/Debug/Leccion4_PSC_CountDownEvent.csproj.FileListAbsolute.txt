@@ -1,0 +1,7 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_CountDownEvent\bin\Debug\Leccion4_PSC_CountDownEvent.exe.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_CountDownEvent\bin\Debug\Leccion4_PSC_CountDownEvent.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_CountDownEvent\bin\Debug\Leccion4_PSC_CountDownEvent.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_CountDownEvent\obj\Debug\Leccion4_PSC_CountDownEvent.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_CountDownEvent\obj\Debug\Leccion4_PSC_CountDownEvent.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_CountDownEvent\obj\Debug\Leccion4_PSC_CountDownEvent.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_CountDownEvent\obj\Debug\Leccion4_PSC_CountDownEvent.pdb

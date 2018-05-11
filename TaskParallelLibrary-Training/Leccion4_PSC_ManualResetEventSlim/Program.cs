@@ -46,44 +46,66 @@ namespace Leccion4_PSC_ManualResetEventSlim
 
         static void DoManualResetEventSlim()
         {
-            int countInvokeShowMessageMethod = 0;
-            ManualResetEventSlim M1 = new ManualResetEventSlim();
+            //int countInvokeShowMessageMethod = 0;
+            //ManualResetEventSlim M1 = new ManualResetEventSlim();
             ManualResetEventSlim M2 = new ManualResetEventSlim(false);
-            ManualResetEventSlim M3 = new ManualResetEventSlim(true);
+            //ManualResetEventSlim M3 = new ManualResetEventSlim(true);
 
-            Task T = Task.Run(() =>
+            Task.Run(delegate
             {
-                ShowMessage("Iniciando ejecución de Tarea", ref countInvokeShowMessageMethod);
-                ShowMessage($"Estado Signal de PSC-MRES M1? {M1.IsSet}", ref countInvokeShowMessageMethod);
-                M1.Wait();
-                ShowMessage($"Reanudando ejecución en Tarea", ref countInvokeShowMessageMethod);
-                ShowMessage($"Estado Signal de PSC-MRES M1? {M1.IsSet}", ref countInvokeShowMessageMethod);
-                ShowMessage($"Estado Signal de PSC-MRES M2? {M2.IsSet}", ref countInvokeShowMessageMethod);
-                ShowMessage($"Estado Signal de PSC-MRES M3? {M3.IsSet}", ref countInvokeShowMessageMethod);
-                ShowMessage($"Señalizando a PSC-MRES M3...", ref countInvokeShowMessageMethod);
-                M3.Set();
-                ShowMessage("Finalizando ejecución de Tarea", ref countInvokeShowMessageMethod);
+                Console.WriteLine("Ejecutando tarea 1");
+                Console.WriteLine("Esperando a MRES a que sea señalizado");
+                M2.Wait();
+                Console.WriteLine($"Tarea 1 reanudando ejecución {DateTime.Now.ToShortTimeString()}");
             });
 
-            ShowMessage($"Estado Signal de PSC-MRES M3? {M3.IsSet}", ref countInvokeShowMessageMethod);
-            ShowMessage($"Deseñalizando a PSC-MRES M3...", ref countInvokeShowMessageMethod);
-            M3.Reset();
-            ShowMessage($"Estado Signal de PSC-MRES M2? {M2.IsSet}", ref countInvokeShowMessageMethod);
-            ShowMessage($"Señalizando a PSC-MRES M2...", ref countInvokeShowMessageMethod);
+            Task.Run(delegate
+            {
+                Console.WriteLine("Ejecutando tarea 2");
+                Console.WriteLine("Esperando a MRES a que sea señalizado (tarea 2)");
+                M2.Wait();
+                Console.WriteLine($"Tarea 2 reanudando ejecución {DateTime.Now.ToShortTimeString()}");
+            });
+
+            Console.WriteLine("Tareas inicializadas");
+            Console.WriteLine("Por dormir 3 segundos y señalizar MRES");
+            Thread.Sleep(3000);
             M2.Set();
-            ShowMessage($"Estado Signal de PSC-MRES M1? {M1.IsSet}", ref countInvokeShowMessageMethod);
-            ShowMessage($"Señalizando a PSC-MRES M1...", ref countInvokeShowMessageMethod);
-            M1.Set();
-            ShowMessage($"Estado Signal de PSC-MRES M3? {M3.IsSet}", ref countInvokeShowMessageMethod);
-            M3.Wait();
-            ShowMessage("Reanudando ejecución de Thread Principal", ref countInvokeShowMessageMethod);
-            ShowMessage("Por liberar recursos de PSC-MRES's", ref countInvokeShowMessageMethod);
-            T.Wait();
-            M1.Dispose();
-            M2.Dispose();
-            M3.Dispose();
-            ShowMessage("Recursos liberados", ref countInvokeShowMessageMethod);
-            ShowMessage("Finalizando ejecución de método \"DoManualResetEventSlim\"", ref countInvokeShowMessageMethod);
+            Console.WriteLine("Finalizando ejecución de método DoManualResetEventSlim");
+
+            //Task T = Task.Run(() =>
+            //{
+            //    ShowMessage("Iniciando ejecución de Tarea", ref countInvokeShowMessageMethod);
+            //    ShowMessage($"Estado Signal de PSC-MRES M1? {M1.IsSet}", ref countInvokeShowMessageMethod);
+            //    M1.Wait();
+            //    ShowMessage($"Reanudando ejecución en Tarea", ref countInvokeShowMessageMethod);
+            //    ShowMessage($"Estado Signal de PSC-MRES M1? {M1.IsSet}", ref countInvokeShowMessageMethod);
+            //    ShowMessage($"Estado Signal de PSC-MRES M2? {M2.IsSet}", ref countInvokeShowMessageMethod);
+            //    ShowMessage($"Estado Signal de PSC-MRES M3? {M3.IsSet}", ref countInvokeShowMessageMethod);
+            //    ShowMessage($"Señalizando a PSC-MRES M3...", ref countInvokeShowMessageMethod);
+            //    M3.Set();
+            //    ShowMessage("Finalizando ejecución de Tarea", ref countInvokeShowMessageMethod);
+            //});
+
+            //ShowMessage($"Estado Signal de PSC-MRES M3? {M3.IsSet}", ref countInvokeShowMessageMethod);
+            //ShowMessage($"Deseñalizando a PSC-MRES M3...", ref countInvokeShowMessageMethod);
+            //M3.Reset();
+            //ShowMessage($"Estado Signal de PSC-MRES M2? {M2.IsSet}", ref countInvokeShowMessageMethod);
+            //ShowMessage($"Señalizando a PSC-MRES M2...", ref countInvokeShowMessageMethod);
+            //M2.Set();
+            //ShowMessage($"Estado Signal de PSC-MRES M1? {M1.IsSet}", ref countInvokeShowMessageMethod);
+            //ShowMessage($"Señalizando a PSC-MRES M1...", ref countInvokeShowMessageMethod);
+            //M1.Set();
+            //ShowMessage($"Estado Signal de PSC-MRES M3? {M3.IsSet}", ref countInvokeShowMessageMethod);
+            //M3.Wait();
+            //ShowMessage("Reanudando ejecución de Thread Principal", ref countInvokeShowMessageMethod);
+            //ShowMessage("Por liberar recursos de PSC-MRES's", ref countInvokeShowMessageMethod);
+            //T.Wait();
+            //M1.Dispose();
+            //M2.Dispose();
+            //M3.Dispose();
+            //ShowMessage("Recursos liberados", ref countInvokeShowMessageMethod);
+            //ShowMessage("Finalizando ejecución de método \"DoManualResetEventSlim\"", ref countInvokeShowMessageMethod);
         }
 
         static void ShowMessage(string message, ref int countInvokes)
