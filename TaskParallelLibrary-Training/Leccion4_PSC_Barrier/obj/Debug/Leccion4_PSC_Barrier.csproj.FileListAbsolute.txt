@@ -1,0 +1,7 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_Barrier\bin\Debug\Leccion4_PSC_Barrier.exe.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_Barrier\bin\Debug\Leccion4_PSC_Barrier.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_Barrier\bin\Debug\Leccion4_PSC_Barrier.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_Barrier\obj\Debug\Leccion4_PSC_Barrier.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_Barrier\obj\Debug\Leccion4_PSC_Barrier.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_Barrier\obj\Debug\Leccion4_PSC_Barrier.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_Barrier\obj\Debug\Leccion4_PSC_Barrier.pdb
