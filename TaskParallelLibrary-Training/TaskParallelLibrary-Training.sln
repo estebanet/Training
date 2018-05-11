@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion4_PSC_SemaphoreSlim"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion4_PSC_CountDownEvent", "Leccion4_PSC_CountDownEvent\Leccion4_PSC_CountDownEvent.csproj", "{2B9F577F-6B8A-4CDC-9204-984CA053F8AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leccion4_PSC_ReaderWriterLockSlim", "Leccion4_PSC_ReaderWriterLockSlim\Leccion4_PSC_ReaderWriterLockSlim.csproj", "{696668F2-D68D-49D5-B6A1-5B099F4EE818}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{2B9F577F-6B8A-4CDC-9204-984CA053F8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B9F577F-6B8A-4CDC-9204-984CA053F8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B9F577F-6B8A-4CDC-9204-984CA053F8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696668F2-D68D-49D5-B6A1-5B099F4EE818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696668F2-D68D-49D5-B6A1-5B099F4EE818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696668F2-D68D-49D5-B6A1-5B099F4EE818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696668F2-D68D-49D5-B6A1-5B099F4EE818}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

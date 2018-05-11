@@ -1,0 +1,7 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_ReaderWriterLockSlim\bin\Debug\Leccion4_PSC_ReaderWriterLockSlim.exe.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_ReaderWriterLockSlim\bin\Debug\Leccion4_PSC_ReaderWriterLockSlim.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_ReaderWriterLockSlim\bin\Debug\Leccion4_PSC_ReaderWriterLockSlim.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_ReaderWriterLockSlim\obj\Debug\Leccion4_PSC_ReaderWriterLockSlim.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_ReaderWriterLockSlim\obj\Debug\Leccion4_PSC_ReaderWriterLockSlim.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_ReaderWriterLockSlim\obj\Debug\Leccion4_PSC_ReaderWriterLockSlim.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_PSC_ReaderWriterLockSlim\obj\Debug\Leccion4_PSC_ReaderWriterLockSlim.pdb
