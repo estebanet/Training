@@ -56,6 +56,8 @@ namespace Leccion4_PSC_Barrier
 
             Parallel.Invoke(() => ConcurrentAction("sub operacion 1"), () => ConcurrentAction("sub operacion 2"), () => ConcurrentAction("sub operacion 3"),
                 () => ConcurrentAction("sub operacion 4"), () => ConcurrentAction("sub operacion 5"));
+
+            B.Dispose();
         }
     }
 }
