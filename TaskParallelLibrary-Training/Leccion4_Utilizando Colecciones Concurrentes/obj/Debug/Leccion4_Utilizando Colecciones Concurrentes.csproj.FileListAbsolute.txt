@@ -1,0 +1,7 @@
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Colecciones Concurrentes\bin\Debug\Leccion4_Utilizando Colecciones Concurrentes.exe.config
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Colecciones Concurrentes\bin\Debug\Leccion4_Utilizando Colecciones Concurrentes.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Colecciones Concurrentes\bin\Debug\Leccion4_Utilizando Colecciones Concurrentes.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Colecciones Concurrentes\obj\Debug\Leccion4_Utilizando Colecciones Concurrentes.csprojResolveAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Colecciones Concurrentes\obj\Debug\Leccion4_Utilizando Colecciones Concurrentes.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Colecciones Concurrentes\obj\Debug\Leccion4_Utilizando Colecciones Concurrentes.exe
+C:\Users\estebangaro\Documents\GitHub\Training\TaskParallelLibrary-Training\Leccion4_Utilizando Colecciones Concurrentes\obj\Debug\Leccion4_Utilizando Colecciones Concurrentes.pdb
