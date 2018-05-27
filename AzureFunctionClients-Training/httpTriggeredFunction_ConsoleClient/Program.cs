@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace httpTriggeredFunction_ConsoleClient
 {
     class Program
     {
+        static string ClientTestKey { get { return ConfigurationManager.AppSettings["ClientTestKey"]; } }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando consumo de Http Triggered Azure Function");
@@ -41,7 +45,6 @@ namespace httpTriggeredFunction_ConsoleClient
             {
                 using (HttpClient httpTriggeredFnClient = new HttpClient())
                 {
-                    // https://function-app-test-garo.azurewebsites.net/api/HttpTriggerCSharp1?code=YeHliYJaFGAVz2eaZaZLmAU6zZtCUz/klZEvmFPq3jxrl9wqxev1Lw==
                     httpTriggeredFnClient.BaseAddress = new Uri("https://function-app-test-garo.azurewebsites.net/");
                     httpTriggeredFnClient.DefaultRequestHeaders.Accept.Clear();
                     httpTriggeredFnClient.DefaultRequestHeaders.Accept.Add(
@@ -50,7 +53,8 @@ namespace httpTriggeredFunction_ConsoleClient
                     HttpRequestMessage rm = new HttpRequestMessage();
 
                     Response = await
-                        httpTriggeredFnClient.PostAsJsonAsync("api/HttpTriggerCSharp1?code=YeHliYJaFGAVz2eaZaZLmAU6zZtCUz/klZEvmFPq3jxrl9wqxev1Lw==", new
+                        httpTriggeredFnClient.PostAsJsonAsync($"api/HttpTriggerCSharp1?code={ClientTestKey}",
+                        new
                         {
                             nombre = name,
                             apellido = "GaRo"
