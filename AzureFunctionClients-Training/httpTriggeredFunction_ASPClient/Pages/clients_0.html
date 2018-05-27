@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cliente HTML5 - Azure Function</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/JavaScript/jQuery/azure_function_client.js"></script>
+</head>
+
+<body>
+    <p>
+        <div class="alert alert-info" role="alert" style="text-align: center">
+            <strong>Cliente HTML5 - Http Triggered Azure Function (POST)</strong>
+        </div>
+    </p>
+    <div id="contenedor" class="container">
+        <form action="https://function-app-tests-garo.azurewebsites.net/api/HttpTriggerCSharp1?code=yjKcDjiz9HfcT54aHO36vqUNF8LnRqhzzbUzq8lAkIS3Fd1XCH600A==" method="POST">
+            <input type="hidden" id="code" name="code" value="yjKcDjiz9HfcT54aHO36vqUNF8LnRqhzzbUzq8lAkIS3Fd1XCH600A==">
+            <p>
+                <h3>Nombre</h3>
+                <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+            </p>
+            <p>
+                <h3>Apellido</h3>
+                <input class="form-control" type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido">
+            </p>
+            <input type="submit" class="btn btn-primary" value="Trigger Http Azure Function">
+        </form>
+    </div>
+
+    <p>
+        <div class="alert alert-info" role="alert" style="text-align: center">
+            <strong>Cliente HTML5 - Http Triggered Azure Function (GET)</strong>
+        </div>
+    </p>
+    <div id="contenedor2" class="container">
+        <form action="https://function-app-tests-garo.azurewebsites.net/api/HttpTriggerCSharp1" method="GET">
+            <input type="hidden" id="code" name="code" value="yjKcDjiz9HfcT54aHO36vqUNF8LnRqhzzbUzq8lAkIS3Fd1XCH600A==">
+            <p>
+                <h3>Nombre</h3>
+                <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+            </p>
+            <p>
+                <h3>Apellido</h3>
+                <input class="form-control" type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido">
+            </p>
+            <input type="submit" class="btn btn-primary" value="Trigger Http Azure Function">
+        </form>
+    </div>
+
+    <p>
+        <div class="alert alert-info" role="alert" style="text-align: center">
+            <strong>Cliente JS - Http Triggered Azure Function (GET)</strong>
+        </div>
+    </p>
+    <div id="contenedor3" class="container">
+        <input type="hidden" id="code" name="code" value="yjKcDjiz9HfcT54aHO36vqUNF8LnRqhzzbUzq8lAkIS3Fd1XCH600A==">
+        <p>
+            <h3>Nombre</h3>
+            <input id="nameGET" class="form-control" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+        </p>
+        <p>
+            <h3>Apellido</h3>
+            <input id="apellidoGET" class="form-control" type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido">
+        </p>
+        <input type="button" id="btnGET" class="btn btn-success" value="Trigger Http Azure Function">
+    </div>
+
+    <p>
+        <div class="alert alert-info" role="alert" style="text-align: center">
+            <strong>Cliente JS - Http Triggered Azure Function (POST)</strong>
+        </div>
+    </p>
+    <div id="contenedor4" class="container">
+        <input type="hidden" id="code" name="code" value="yjKcDjiz9HfcT54aHO36vqUNF8LnRqhzzbUzq8lAkIS3Fd1XCH600A==">
+        <p>
+            <h3>Nombre</h3>
+            <input id="namePOST" class="form-control" type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+        </p>
+        <p>
+            <h3>Apellido</h3>
+            <input id="apellidoPOST" class="form-control" type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido">
+        </p>
+        <input type="submit" id="btnPOST" class="btn btn-success" value="Trigger Http Azure Function">
+    </div>
+</body>
+
+</html>

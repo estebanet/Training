@@ -1,6 +1,6 @@
-﻿using System;
+﻿using httpTriggeredFunction_ConsoleClient.Utilidades;
+using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 
 namespace httpTriggeredFunction_ConsoleClient
 {
+    class Response
+    {
+        public string Message { get; set; }
+    }
     class Program
     {
-        static string ClientTestKey { get { return ConfigurationManager.AppSettings["ClientTestKey"]; } }
-
         static void Main(string[] args)
         {
             Console.WriteLine("Iniciando consumo de Http Triggered Azure Function");
@@ -23,9 +25,9 @@ namespace httpTriggeredFunction_ConsoleClient
             if (Response.Result != null)
             {
                 Response.Wait();
-                Task<string> Result = Response.Result.Content.ReadAsStringAsync();
+                Task<Response> Result = Response.Result.Content.ReadAsAsync<Response>();
                 Result.Wait();
-                ResultText = Result.Result;
+                ResultText = Result.Result.Message;
             }
             else
             {
@@ -45,7 +47,7 @@ namespace httpTriggeredFunction_ConsoleClient
             {
                 using (HttpClient httpTriggeredFnClient = new HttpClient())
                 {
-                    httpTriggeredFnClient.BaseAddress = new Uri("https://function-app-test-garo.azurewebsites.net/");
+                    httpTriggeredFnClient.BaseAddress = new Uri($"{AppConfig.BaseAddress}/");
                     httpTriggeredFnClient.DefaultRequestHeaders.Accept.Clear();
                     httpTriggeredFnClient.DefaultRequestHeaders.Accept.Add(
                         new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
@@ -53,7 +55,7 @@ namespace httpTriggeredFunction_ConsoleClient
                     HttpRequestMessage rm = new HttpRequestMessage();
 
                     Response = await
-                        httpTriggeredFnClient.PostAsJsonAsync($"api/HttpTriggerCSharp1?code={ClientTestKey}",
+                        httpTriggeredFnClient.PostAsJsonAsync($"{AppConfig.RequestURI}?code={AppConfig.ClientTestKey}",
                         new
                         {
                             nombre = name,
