@@ -1,0 +1,15 @@
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\TestEFModelsLibrary.exe.config
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\TestEFModelsLibrary.exe
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\TestEFModelsLibrary.pdb
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\EntityFrameworkModels.dll
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\EntityFramework.dll
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\EntityFrameworkModels.pdb
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\EntityFrameworkModels.dll.config
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\EntityFramework.xml
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\obj\Debug\TestEFModelsLibrary.csprojAssemblyReference.cache
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\obj\Debug\TestEFModelsLibrary.csproj.CoreCompileInputs.cache
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\obj\Debug\TestEFModelsLibrary.csproj.CopyComplete
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\obj\Debug\TestEFModelsLibrary.exe
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\obj\Debug\TestEFModelsLibrary.pdb
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\TestEFModelsLibrary\bin\Debug\EntityFramework.SqlServer.xml

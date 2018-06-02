@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ClientEFModels" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ClientEFModelsContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="ClientEFModels.Cliente" />
+  </EntityContainer>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Nombre" Type="String" Nullable="false" Unicode="true" MaxLength="60" />
+    <Property Name="Edad" Type="Int16" Nullable="false" />
+    <Property Name="Ciudad" Type="String" Nullable="false" Unicode="true" MaxLength="30" />
+  </EntityType>
+</Schema>

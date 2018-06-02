@@ -1,0 +1,12 @@
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\bin\Debug\EntityFrameworkModels.dll.config
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\bin\Debug\EntityFrameworkModels.dll
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\bin\Debug\EntityFrameworkModels.pdb
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\bin\Debug\EntityFramework.dll
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\bin\Debug\EntityFramework.xml
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\obj\Debug\EntityFrameworkModels.csprojAssemblyReference.cache
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\obj\Debug\EntityFrameworkModels.csproj.CoreCompileInputs.cache
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\obj\Debug\EntityFrameworkModels.csproj.CopyComplete
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\obj\Debug\EntityFrameworkModels.dll
+C:\Users\esteb\Documents\GitHub\Training\AzureFunctions-Training\AzureFunctions\EntityFrameworkModels\obj\Debug\EntityFrameworkModels.pdb
