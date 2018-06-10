@@ -11,94 +11,41 @@ using WebApi_EnMetodosHttp.Models;
 
 namespace WebApi_EnNomAcciones.Controllers
 {
-    public class Colors2Controller : ApiController
+    public class Colors2Controller : ColorBase
     {
         // GetPorId/Colors2/4 HTTP 1.1 GET
         //[HttpGet], Convención de nombres de métodos HTTP (para definir TIPO de operación)
         [ResponseType(typeof(Color))]
-        public async Task<IHttpActionResult> GetPorId(int identifer)
+        public override async Task<IHttpActionResult> GetPorId(int identifer)
         {
-            WebApi_EnMetodosHttp.Models.ColorsActionsLogic Logic = 
-                new ColorsActionsLogic();
-            Color color = await Logic.GetColorById(identifer);
-
-            if (color == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(color);
+            var response = await base.GetPorId(identifer);
+            return response;
         }
 
-        // Guardar/Colors2 HTTP 1.1 POST
-        [HttpPost]
+        // Guardar/Colors2 HTTP 1.1 *POST
         [ActionName("Guardar")]
+        [HttpPost]
         public async Task<IHttpActionResult> SaveColor(Color color)
         {
-            WebApi_EnMetodosHttp.Models.ColorsActionsLogic Logic =
-                new ColorsActionsLogic();
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            color = await Logic.PostColor(color);
-
-            return CreatedAtRoute("DefaultApi", new { id = color.Id }, color);
+            var response = await base.SaveColor(color, "DefaultApi");
+            return response;
         }
 
         // Actualizar/Colors2?id={id}
         [HttpPut]
-        public async Task<IHttpActionResult>
+        public override async Task<IHttpActionResult>
             Actualizar(int id, Color color)
         {
-            WebApi_EnMetodosHttp.Models.ColorsActionsLogic Logic =
-                new ColorsActionsLogic();
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != color.Id)
-            {
-                return BadRequest();
-            }
-
-            try
-            {
-                await Logic.UpdateColor(color);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await Logic.ColorExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
+            var response = await base.Actualizar(id, color);
+            return response;
         }
 
         // Eliminar/Colors2/2
         [HttpDelete]
-        public async Task<IHttpActionResult> Eliminar(int identifer)
+        public override async Task<IHttpActionResult> Eliminar(int identifer)
         {
-            WebApi_EnMetodosHttp.Models.ColorsActionsLogic Logic =
-                new ColorsActionsLogic();
-
-            Color color = await Logic.DeleteColor(identifer);
-
-            if (color == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(color);
+            var response = await base.Eliminar(identifer);
+            return response;
         }
     }
 }

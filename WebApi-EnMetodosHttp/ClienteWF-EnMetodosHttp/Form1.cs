@@ -104,7 +104,7 @@ namespace ClienteWF_EnMetodosHttp
             {
                 Uri Enlace = await HttpCliente.InsertColor(ObtenColor());
                 MessageBox.Show("Se ha registrado correctamente el color");
-                tbId.Text = Enlace.Segments[3];
+                tbId.Text = Enlace.Segments[Enlace.Segments.Length - 1];
             }
             catch (Exception ex)
             {
