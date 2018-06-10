@@ -71,7 +71,7 @@ namespace WebApiClientLibrary
             using (HttpClient Client = new HttpClient())
             {
                 ConfigDefaultRequestHeaderValues(Client);
-                HttpResponse = await Client.PutAsJsonAsync<Color>("webapi/colors/Guardar",
+                HttpResponse = await Client.PostAsJsonAsync<Color>("webapi/colors/Guardar/color",
                     color);
                 HttpResponse.EnsureSuccessStatusCode();
             }

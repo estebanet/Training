@@ -23,10 +23,9 @@ namespace WebApi_EnNomAcciones.Controllers
             return response;
         }
 
-        // http://localhost/webapi/colors/Guardar, ruta con posibilidad de conflicto, pues 
+        // http://localhost/webapi/colors/Guardar/color, ruta con posibilidad de conflicto, pues 
         // la coincide con la plantilla de enrutamiento por nombre de acciones: {action}/{controller}/{identifer}
-        [Route("Guardar")]
-        [ActionName("Guardar")]
+        [Route("Guardar/color")]
         public async Task<IHttpActionResult> PostColor(Color color)
         {
             var response = await SaveColor(color);
@@ -44,7 +43,7 @@ namespace WebApi_EnNomAcciones.Controllers
         }
 
         // http://localhost/webapi/colors/Eliminar/{identifer}
-        [Route("Eliminar/{indentifer:int}")]
+        [Route("Eliminar/{identifer:int}")]
         [HttpDelete]
         public override async Task<IHttpActionResult> Eliminar(int identifer)
         {
