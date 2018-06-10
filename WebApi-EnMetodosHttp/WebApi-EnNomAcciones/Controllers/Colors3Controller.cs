@@ -14,12 +14,12 @@ namespace WebApi_EnNomAcciones.Controllers
     public class Colors3Controller : ColorBase
     {
         // http://localhost/webapi/colors/ConsultaPorId/{identifer}
-        [Route("ConsultaPorId/{identifer:int}")]
+        [Route("ConsultaPorId/{id:int}", Name = "DefaultApi2")]
         [HttpGet]
         [ResponseType(typeof(Color))]
-        public async Task<IHttpActionResult> ConsultaPorId(int identifer)
+        public async Task<IHttpActionResult> ConsultaPorId(int id)
         {
-            var response = await GetPorId(identifer);
+            var response = await GetPorId(id);
             return response;
         }
 
@@ -28,7 +28,7 @@ namespace WebApi_EnNomAcciones.Controllers
         [Route("Guardar/color")]
         public async Task<IHttpActionResult> PostColor(Color color)
         {
-            var response = await SaveColor(color);
+            var response = await SaveColor(color, "DefaultApi2");
             return response;
         }
 
@@ -51,18 +51,19 @@ namespace WebApi_EnNomAcciones.Controllers
             return response;
         }
 
-        // http://localhost/api/{identifer}
-        public async Task<IHttpActionResult> DeleteColor(int identifer)
+        // http://localhost/api/Colors3/{id}
+        [HttpDelete]
+        public async Task<IHttpActionResult> DeleteColor(int id)
         {
-            var response = await base.Eliminar(identifer);
+            var response = await base.Eliminar(id);
             return response;
         }
 
         // http://localhost/EliminarColor/Colors3/{id:int}
         [HttpDelete]
-        public async Task<IHttpActionResult> EliminarColor(int id)
+        public async Task<IHttpActionResult> EliminarColor(int identifer)
         {
-            var response = await base.Eliminar(id);
+            var response = await base.Eliminar(identifer);
             return response;
         }
     }

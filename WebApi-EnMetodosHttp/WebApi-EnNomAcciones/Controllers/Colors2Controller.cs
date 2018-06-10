@@ -25,9 +25,9 @@ namespace WebApi_EnNomAcciones.Controllers
         // Guardar/Colors2 HTTP 1.1 *POST
         [ActionName("Guardar")]
         [HttpPost]
-        public override async Task<IHttpActionResult> SaveColor(Color color)
+        public async Task<IHttpActionResult> SaveColor(Color color)
         {
-            var response = await base.SaveColor(color);
+            var response = await base.SaveColor(color, "DefaultApi");
             return response;
         }
 

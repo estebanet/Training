@@ -27,7 +27,8 @@ namespace WebApi_EnNomAcciones.Controllers
             return Ok(color);
         }
         
-        public virtual async Task<IHttpActionResult> SaveColor(Color color)
+        public virtual async Task<IHttpActionResult> SaveColor(Color color, 
+            string routeName = "DefaultApi")
         {
             WebApi_EnMetodosHttp.Models.ColorsActionsLogic Logic =
                 new ColorsActionsLogic();
@@ -39,7 +40,7 @@ namespace WebApi_EnNomAcciones.Controllers
 
             color = await Logic.PostColor(color);
 
-            return CreatedAtRoute("DefaultApi", new { id = color.Id }, color);
+            return CreatedAtRoute(routeName, new { id = color.Id }, color);
         }
         
         public virtual async Task<IHttpActionResult>

@@ -32,7 +32,9 @@ namespace WebApiClientLibrary
             using (HttpClient Client = new HttpClient())
             {
                 ConfigDefaultRequestHeaderValues(Client);
-                HttpResponse = await Client.DeleteAsync($"webapi/colors/Eliminar/{id}");
+                HttpResponse = await Client.DeleteAsync($"EliminarColor/Colors3/{id}");
+                    // Client.DeleteAsync($"api/Colors3/{id}");
+                    // Client.DeleteAsync($"webapi/colors/Eliminar/{id}");
                 HttpResponse.EnsureSuccessStatusCode();
             }
 
