@@ -15,6 +15,7 @@ namespace Microsoft_Azure_Table_Storage
         {
             try
             {
+                #region Documentación 1.0
                 //var consulta =
                 //    //ObtenEquipo("Cruz Azul");
                 ////ObtenEquiposConMasDe7Campeonatos();
@@ -26,7 +27,34 @@ namespace Microsoft_Azure_Table_Storage
                 //        $"Apodo: {equipo.Apodo}, Campeonatos: {equipo.NoCampeonatos}, " +
                 //        $"Fundación: {equipo.Fundacion.ToShortDateString()}");
                 //}
-                InsertaEquipoIngles("CosasParaBorrarTable");
+                //InsertaEquipoIngles("CosasParaBorrarTable");
+                #endregion
+
+                #region Documentación 2.0
+
+                #region Inserts (one entity and insert batch operations)
+
+                Modelo.Equipo Equipo = new Modelo.Equipo("México", "Mundial");
+                Equipo.Apodo = "Equipo mexicano";
+                Equipo.IdEquipo = 1;
+                Equipo.NoCampeonatos = 0;
+
+                Console.WriteLine("Registrando equipo");
+                InsertEquipoEntity(Equipo);
+                Console.WriteLine("Registrando equipos");
+                Modelo.Equipo Equipo2 = new Modelo.Equipo("Corea del Sur", "Mundial");
+                Modelo.Equipo Equipo3 = new Modelo.Equipo("Alemania", "Mundial");
+                Equipo2.Apodo = "coreanos";
+                Equipo2.IdEquipo = 2;
+                Equipo.NoCampeonatos = 0;
+                Equipo3.Apodo = "La máquina alemana";
+                Equipo3.IdEquipo = 3;
+                Equipo3.NoCampeonatos = 4;
+                InsertEquipoEntities(new List<Modelo.Equipo> { Equipo2, Equipo3 });
+
+                #endregion
+
+                #endregion
             }
             catch (Exception ex)
             {
@@ -36,6 +64,8 @@ namespace Microsoft_Azure_Table_Storage
             Console.WriteLine("Presione <enter> para continuar");
             Console.ReadLine();
         }
+
+        #region Documentación 1.0
 
         static void InsertaEquipoIngles(string Tabla, string liga = "Liga Premier")
         {
@@ -167,5 +197,69 @@ namespace Microsoft_Azure_Table_Storage
 
             cloudTable.ExecuteBatch(tableOperation);
         }
+
+        #endregion
+
+        #region Documentación 2.0
+
+        #region Inserts (one entity and insert batch operations)
+
+        private static void InsertEquipoEntity(Modelo.Equipo entity)
+        {
+            try
+            {
+                // Se crea cuenta de almacenamiento para obtener el cliente de servicio de tablas de azure.
+                CloudStorageAccount StorageAccount_garo = CloudStorageAccount.Parse(
+                    CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
+                // Se crea cliente de servicio de tablas de azure, para crear/obtener referencia una tabla de azure.
+                CloudTableClient TableClient = StorageAccount_garo.CreateCloudTableClient();
+                // Se crea/obtiene referencia a tabla de azure.
+                CloudTable Table = TableClient.GetTableReference("Mundial");
+                // Se asegura la existencia de la tabla de azure recién obtenida.
+                Table.CreateIfNotExists();
+                // Se crea entidad a registrar.
+                //Modelo.Equipo Equipo = new Modelo.Equipo("México", "Mundial");
+                //Equipo.Apodo = "Equipo mexicano";
+                //Equipo.IdEquipo = 1;
+                //Equipo.NoCampeonatos = 0;
+                // Se crea operación de tabla, para registrar entidad Equipo.
+                TableOperation InsertEquipo = TableOperation.Insert(entity);
+                // Se ejecuta operación de tabla.
+                TableResult InsertResult = Table.Execute(InsertEquipo);
+                // Se muestran resultados de operación por consola.
+                Console.WriteLine("Se ha registrado exitosamente el equipo:");
+                Console.WriteLine(entity);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ha fallado la inserción de equipo, " +
+                    $"Error: {ex.Message}");
+            }
+        }
+
+        private static void InsertEquipoEntities(List<Modelo.Equipo> entities)
+        {
+            try
+            {
+                CloudStorageAccount StorageAccount = 
+                CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("ConexionGaroNetStorage"));
+            CloudTableClient TableClient = StorageAccount.CreateCloudTableClient();
+            CloudTable Table = TableClient.GetTableReference("Mundial");
+            Table.CreateIfNotExists();
+            TableBatchOperation BatchOperation = new TableBatchOperation();
+            entities.ForEach(Equipo => BatchOperation.Insert(Equipo));
+            Table.ExecuteBatch(BatchOperation);
+            Console.WriteLine("Se han registrado los equipos");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ha fallado la inserción de equipos, " +
+                    $"Error: {ex.Message}");
+            }
+        }
+
+        #endregion
+
+        #endregion
     }
 }
