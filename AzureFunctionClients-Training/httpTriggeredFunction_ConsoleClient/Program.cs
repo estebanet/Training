@@ -19,15 +19,15 @@ namespace httpTriggeredFunction_ConsoleClient
         {
             Console.WriteLine("Iniciando consumo de Http Triggered Azure Function");
             Task<HttpResponseMessage> Response =
-                TriggeredAzureFunction("Esteban");
+                TriggeredAzureFunction();
             string ResultText;
 
             if (Response.Result != null)
             {
                 Response.Wait();
-                Task<Response> Result = Response.Result.Content.ReadAsAsync<Response>();
+                var Result = Response.Result.Content.ReadAsAsync(typeof(string));
                 Result.Wait();
-                ResultText = Result.Result.Message;
+                ResultText = Result.Result.ToString();
             }
             else
             {
@@ -39,7 +39,7 @@ namespace httpTriggeredFunction_ConsoleClient
             Console.Read();
         }
 
-        static async Task<HttpResponseMessage> TriggeredAzureFunction(string name)
+        static async Task<HttpResponseMessage> TriggeredAzureFunction()
         {
             HttpResponseMessage Response;
 
@@ -58,8 +58,10 @@ namespace httpTriggeredFunction_ConsoleClient
                         httpTriggeredFnClient.PostAsJsonAsync($"{AppConfig.RequestURI}?code={AppConfig.ClientTestKey}",
                         new
                         {
-                            nombre = name,
-                            apellido = "GaRo"
+                            Nombre = "Croacia",
+                            Id = 8,
+                            Campeonatos = 0,
+                            Apodo = "Los amigos de Luca"
                         });
                     //httpTriggeredFnClient
                     //    .GetAsync($"api/HttpTriggerCSharp1?code=YeHliYJaFGAVz2eaZaZLmAU6zZtCUz/klZEvmFPq3jxrl9wqxev1Lw==&nombre={name}");
