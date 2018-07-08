@@ -11,11 +11,15 @@ namespace Microsoft_Azure_Table_Storage.Modelo
     {
         public Equipo(string Nombre, string Liga)
             : base(Liga, Nombre) { }
-        public Equipo() { }
+        public Equipo(): base("LigaMx", "Cruz Azul") { }
 
         public int IdEquipo { get; set; }
         public int NoCampeonatos { get; set; }
         public string Apodo { get; set; }
-        public DateTime Fundacion { get; set; }
+        public DateTime? Fundacion { get; set; }
+        public override string ToString()
+        {
+            return $"Nombre: {this.RowKey}, Apodo: {this.Apodo}, Id: {this.IdEquipo}";
+        }
     }
 }

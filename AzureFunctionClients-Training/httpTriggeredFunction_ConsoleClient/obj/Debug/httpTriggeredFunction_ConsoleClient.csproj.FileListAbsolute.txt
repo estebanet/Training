@@ -22,3 +22,15 @@ C:\Users\esteb\Documents\GitHub\Training\AzureFunctionClients-Training\httpTrigg
 C:\Users\esteb\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.csproj.CopyComplete
 C:\Users\esteb\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.exe
 C:\Users\esteb\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.pdb
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\bin\Debug\httpTriggeredFunction_ConsoleClient.exe.config
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\bin\Debug\httpTriggeredFunction_ConsoleClient.exe
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\bin\Debug\httpTriggeredFunction_ConsoleClient.pdb
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.csprojAssemblyReference.cache
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.csproj.CopyComplete
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.exe
+C:\Users\Desarrollo2\Documents\GitHub\Training\AzureFunctionClients-Training\httpTriggeredFunction_ConsoleClient\obj\Debug\httpTriggeredFunction_ConsoleClient.pdb

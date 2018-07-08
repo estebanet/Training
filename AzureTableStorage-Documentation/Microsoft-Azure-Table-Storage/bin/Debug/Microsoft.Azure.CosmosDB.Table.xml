@@ -3870,7 +3870,7 @@
         </member>
         <member name="F:Microsoft.Azure.CosmosDB.Table.TableRequestOptions.BaseDefaultRequestOptions">
             <summary>
-            Defines the absolute default option values, should neither the user nor client specify anything.
+            Defines the absolute default option values, should neither the request nor client specify anything.
             </summary>
         </member>
         <member name="M:Microsoft.Azure.CosmosDB.Table.TableRequestOptions.#ctor">
@@ -3949,7 +3949,7 @@
         </member>
         <member name="P:Microsoft.Azure.CosmosDB.Table.TableRequestOptions.SessionToken">
             <summary>
-            Gets or sets the token for use with session consistency in the Azure Cosmos DB service.
+            Gets or sets the token for use with session consistency in the Azure Cosmos DB service. Only supported in Direct Mode.
             </summary>
             <value>
             The token for use with session consistency.
@@ -3987,12 +3987,12 @@
             The maximum number of items to be returned in a query operation. Default is 1000.
             </value> 
             <remarks>
-            -1 lets Azure Cosmos DB dynamically determine the value at runtime.
+            -1 lets Azure Cosmos DB dynamically determine the value at runtime. Only supported in Direct Mode. 
             </remarks>
         </member>
         <member name="P:Microsoft.Azure.CosmosDB.Table.TableRequestOptions.TableQueryEnableScan">
             <summary>
-            Get or set the option to run a scan when a filter cannot use the index for any filter. Default is false.
+            Get or set the option to run a scan when a filter cannot use the index for any filter. Default is false. Only supported in Direct Mode.
             </summary>
         </member>
         <member name="P:Microsoft.Azure.CosmosDB.Table.TableRequestOptions.TableQueryMaxDegreeOfParallelism">
@@ -4003,7 +4003,7 @@
             The maximum number of concurrent operations during parallel execution. Defaults to -1.
             </value>
             <remarks>
-            0 is serial with no pre-fetching, 1 is serial with pre-fetching, and higher values increase the rate of parallelism. -1 lets Azure Cosmos DB dynamically determine the value at runtime.
+            0 is serial with no pre-fetching, 1 is serial with pre-fetching, and higher values increase the rate of parallelism. -1 lets Azure Cosmos DB dynamically determine the value at runtime. Only supported in Direct Mode.
             </remarks>
         </member>
         <member name="P:Microsoft.Azure.CosmosDB.Table.TableRequestOptions.TableQueryContinuationTokenLimitInKb">
@@ -4011,7 +4011,7 @@
              Get or set the length of continuation token in the query response. Valid values are >= 0.
             </summary>
             <value>
-            The token length in kilobytes.
+            The token length in kilobytes. Only supported in Direct Mode.
             </value>
         </member>
         <member name="T:Microsoft.Azure.CosmosDB.Table.TableResult">

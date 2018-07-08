@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cliente Http Trigger + Table Storage Output Binding</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#RegistrarEquipo').click(function () {
+                $.ajax({
+                    url: 'https://garo-fn-azuredev.azurewebsites.net/api/mundial/registra/equipo',
+                    method: 'POST',
+                    headers: {
+                        'x-functions-key': 'nimbus06_httptriggeredazurefunction'
+                    },
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify({
+                        Nombre: $('#Nombre').val(),
+                        Id: $('#Id').val(),
+                        Campeonatos: $('#Campeonatos').val(),
+                        Apodo: $('#Apodo').val()
+                    }),
+                    success: function (data) {
+                        alert('Se ha registrado el equipo exitosamente');
+                    },
+                    error: function (data) {
+                        alert('Ha fallado la petición de azure function');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="alert alert-info" style="text-align:center;">
+        <strong>Registro de Equipos</strong>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Nombre</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" name="Nombre" id="Nombre" placeholder="Introducir Nombre" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Id</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" name="Id" id="Id" placeholder="Introducir Identificador" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label># Campeonatos</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" name="Campeonatos" id="Campeonatos" placeholder="Introducir Número de Campeonatos" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>Apodo</label>
+            </div>
+            <div class="col-md-8">
+                <input class="form-control" type="text" name="Apodo" id="Apodo" placeholder="Introducir Apodo" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4" style="text-align:right;">
+                <button id="RegistrarEquipo" type="button" class="btn btn-success">Registrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
