@@ -1,0 +1,12 @@
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\bin\Debug\GaroData.dll.config
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\bin\Debug\GaroData.dll
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\bin\Debug\GaroData.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\bin\Debug\EntityFramework.dll
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\bin\Debug\EntityFramework.xml
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\obj\Debug\GaroData.csprojAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\obj\Debug\GaroData.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\obj\Debug\GaroData.csproj.CopyComplete
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\obj\Debug\GaroData.dll
+C:\Users\estebangaro\Documents\GitHub\Training\AzureFunctionsQueueTrigger\Apps-QueueStorage\GaroData\obj\Debug\GaroData.pdb
