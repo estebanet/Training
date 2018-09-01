@@ -18,8 +18,21 @@ namespace WebAppIdentityAuth.App_Start
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/Account/Login"),
-                ReturnUrlParameter = "UrlPrev"
+                ReturnUrlParameter = "UrlPrev",
+                //Provider = 
             });
+
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+
+            app.UseFacebookAuthentication(new Microsoft.Owin.Security.Facebook.FacebookAuthenticationOptions
+            {
+                AppId = "241125106596916",
+                AppSecret = "d31fe3569bc84b1e0b0a9b2cb81b20b0"
+            });
+
+            // Microsoft.Owin.Security.Cookies.ICookieAuthenticationProvider
         }
     }
+
+    
 }

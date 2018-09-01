@@ -1,0 +1,12 @@
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\bin\Release\Authentication.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\bin\Release\Authentication.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\bin\Release\ModelsAppUsers.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\bin\Release\EntityFramework.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\bin\Release\ModelsAppUsers.pdb
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\bin\Release\ModelsAppUsers.dll.config
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\bin\Release\EntityFramework.xml
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\obj\Release\Authentication.csprojAssemblyReference.cache
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\obj\Release\Authentication.csproj.CoreCompileInputs.cache
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\obj\Release\Authentication.csproj.CopyComplete
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\obj\Release\Authentication.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\Authentication\obj\Release\Authentication.pdb

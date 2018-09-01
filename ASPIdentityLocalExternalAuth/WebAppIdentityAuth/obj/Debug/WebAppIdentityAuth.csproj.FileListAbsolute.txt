@@ -89,3 +89,11 @@ C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebA
 C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\obj\Debug\WebAppIdentityAuth.pdb
 C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\EntityFramework.SqlServer.dll
 C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\EntityFramework.SqlServer.xml
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Newtonsoft.Json.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Newtonsoft.Json.xml
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\estebangaro\Documents\GitHub\Training\ASPIdentityLocalExternalAuth\WebAppIdentityAuth\bin\Microsoft.Owin.Security.OAuth.xml

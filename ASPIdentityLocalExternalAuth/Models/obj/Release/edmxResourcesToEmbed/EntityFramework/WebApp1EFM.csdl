@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="WebApp1EFM" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="WebApp1EFMContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="WebApp1EFM.User" />
+    <EntitySet Name="Profiles" EntityType="WebApp1EFM.Profile" />
+    <EntitySet Name="Roles" EntityType="WebApp1EFM.Role" />
+    <AssociationSet Name="UserProfile" Association="WebApp1EFM.UserProfile">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Profile" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="RoleUser" Association="WebApp1EFM.RoleUser">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Documentation>
+      <Summary>Inicio de sesión</Summary>
+      <LongDescription>Representa un inicio de sesión local en la aplicación web</LongDescription>
+    </Documentation>
+    <Key>
+      <PropertyRef Name="UserIdentifier" />
+    </Key>
+    <Property Name="UserIdentifier" Type="String" Nullable="false" MaxLength="60" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="255" Unicode="true" />
+    <NavigationProperty Name="Profile" Relationship="WebApp1EFM.UserProfile" FromRole="User" ToRole="Profile" />
+    <NavigationProperty Name="Roles" Relationship="WebApp1EFM.RoleUser" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Profile">
+    <Key>
+      <PropertyRef Name="UserIdentifier" />
+    </Key>
+    <Property Name="UserIdentifier" Type="String" Nullable="false" MaxLength="60" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="true" Unicode="true" MaxLength="60" />
+    <Property Name="FirstName" Type="String" Nullable="true" Unicode="true" MaxLength="60" />
+    <Property Name="LastName" Type="String" Nullable="true" MaxLength="60" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="true" MaxLength="255" Unicode="true" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="true" />
+    <NavigationProperty Name="User" Relationship="WebApp1EFM.UserProfile" FromRole="Profile" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="60" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="true" Unicode="true" MaxLength="120" />
+    <NavigationProperty Name="Users" Relationship="WebApp1EFM.RoleUser" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <Association Name="UserProfile">
+    <End Type="WebApp1EFM.User" Role="User" Multiplicity="1" />
+    <End Type="WebApp1EFM.Profile" Role="Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserIdentifier" />
+      </Principal>
+      <Dependent Role="Profile">
+        <PropertyRef Name="UserIdentifier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RoleUser">
+    <End Type="WebApp1EFM.Role" Role="Role" Multiplicity="*" />
+    <End Type="WebApp1EFM.User" Role="User" Multiplicity="*" />
+  </Association>
+</Schema>

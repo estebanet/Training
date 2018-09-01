@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelsAppUsers", "Models\Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppIdentityAuth", "WebAppIdentityAuth\WebAppIdentityAuth.csproj", "{8E941FE7-9DFE-4B95-BCB0-F7D12FA0A17D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppIdentityTemplate", "WebAppIdentityTemplate\WebAppIdentityTemplate.csproj", "{1CC59FFB-46F1-418D-9BA6-CAD181B70B23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8E941FE7-9DFE-4B95-BCB0-F7D12FA0A17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E941FE7-9DFE-4B95-BCB0-F7D12FA0A17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E941FE7-9DFE-4B95-BCB0-F7D12FA0A17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CC59FFB-46F1-418D-9BA6-CAD181B70B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CC59FFB-46F1-418D-9BA6-CAD181B70B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CC59FFB-46F1-418D-9BA6-CAD181B70B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CC59FFB-46F1-418D-9BA6-CAD181B70B23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

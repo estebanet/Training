@@ -11,6 +11,7 @@ namespace WebAppIdentityAuth.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+
         public ActionResult Index()
         {
             ClaimsPrincipal Principal =

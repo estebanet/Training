@@ -21,10 +21,22 @@ namespace WebAppIdentityAuth.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult Login()
         {
-            return View();
+            ActionResult Result;
+
+            if (User != null && User.Identity.IsAuthenticated)
+            {
+                Result = RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                Result = View();
+            }
+
+            return Result;
         }
 
         [HttpPost]
@@ -50,12 +62,37 @@ namespace WebAppIdentityAuth.Controllers
             return Result;
         }
 
+        [Authorize]
         [HttpGet]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
 
             return RedirectToAction("Login", controllerName: "Account");
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult ExternalLogin(string externalProvider)
+        {
+            externalProvider = externalProvider.Replace("Inicia sesión con", string.Empty).Trim();
+            string UserId = (User as ClaimsPrincipal).Claims.First(claim => claim.Type == ClaimTypes.NameIdentifier).Value;
+
+            return new Models.Helpers.ChallengeResult(UserId, Url.Action("ExternalLoginCallback"), 
+                externalProvider);
+        }
+
+
+        public async Task<ActionResult> ExternalLoginCallback()
+        {
+            string UserId = (User as ClaimsPrincipal).Claims.First(claim => claim.Type == ClaimTypes.NameIdentifier).Value;
+            var LoginExternalInfo = await AuthenticationManager.GetExternalLoginInfoAsync(
+                Models.Helpers.ChallengeResult.CsrfKey, UserId);
+
+            
+
+            return Content($"Sesión iniciada por: {LoginExternalInfo.DefaultUserName}");
         }
 
         private ActionResult SignInUser(User login, bool remember, string returnUrl)
@@ -69,15 +106,15 @@ namespace WebAppIdentityAuth.Controllers
             UserClaims.Add(new Claim("FullName", $"{login.Profile.Name} {login.Profile.FirstName}"));
             UserClaims.Add(new Claim(ClaimTypes.StreetAddress, login.Profile.Address));
 
-            if(login.Roles.Count > 0)
+            if (login.Roles.Count > 0)
             {
                 UserClaims.AddRange(
                     login.Roles.Select(role => new Claim(ClaimTypes.Role, role.Name)));
             }
 
             UserClaimsIdentity = new ClaimsIdentity(UserClaims, DefaultAuthenticationTypes.ApplicationCookie);
-            Microsoft.Owin.Security.IAuthenticationManager AuthManager = AuthenticationManager;
-            AuthManager.SignIn(new Microsoft.Owin.Security.AuthenticationProperties
+            
+            AuthenticationManager.SignIn(new Microsoft.Owin.Security.AuthenticationProperties
             {
                 IsPersistent = remember
             }, UserClaimsIdentity);
