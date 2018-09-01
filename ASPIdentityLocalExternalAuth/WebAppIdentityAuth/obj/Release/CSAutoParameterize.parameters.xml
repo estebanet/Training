@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="WebApp1EFMContainer-Web.config Connection String" description="WebApp1EFMContainer Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/EntityFramework.WebApp1EFM.csdl|res://*/EntityFramework.WebApp1EFM.ssdl|res://*/EntityFramework.WebApp1EFM.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:garo-net-servbd.database.windows.net,1433;initial catalog=garonet.com;user id=estebangaro;password=Nimbus08+;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\estebangaro\\Documents\\GitHub\\Training\\ASPIdentityLocalExternalAuth\\WebAppIdentityAuth\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WebApp1EFMContainer']/@connectionString" />
+  </parameter>
+</parameters>

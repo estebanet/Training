@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebApp1EFM.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="WebApp1EFMStoreContainer">
+    <EntitySet Name="Users" EntityType="WebApp1EFM.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profiles" EntityType="WebApp1EFM.Store.Profiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="WebApp1EFM.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RoleUser" EntityType="WebApp1EFM.Store.RoleUser" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserProfile" Association="WebApp1EFM.Store.UserProfile">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Profile" EntitySet="Profiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleUser_Role" Association="WebApp1EFM.Store.FK_RoleUser_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="RoleUser" EntitySet="RoleUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleUser_User" Association="WebApp1EFM.Store.FK_RoleUser_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="RoleUser" EntitySet="RoleUser" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserIdentifier" />
+    </Key>
+    <Property Name="UserIdentifier" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Profiles">
+    <Key>
+      <PropertyRef Name="UserIdentifier" />
+    </Key>
+    <Property Name="UserIdentifier" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="60" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="true" MaxLength="60" />
+    <Property Name="LastName" Type="nvarchar" Nullable="true" MaxLength="60" />
+    <Property Name="Address" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="60" />
+    <Property Name="Description" Type="nvarchar" Nullable="true" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="RoleUser">
+    <Key>
+      <PropertyRef Name="Roles_Id" />
+      <PropertyRef Name="Users_UserIdentifier" />
+    </Key>
+    <Property Name="Roles_Id" Type="smallint" Nullable="false" />
+    <Property Name="Users_UserIdentifier" Type="nvarchar" Nullable="false" MaxLength="60" />
+  </EntityType>
+  <Association Name="UserProfile">
+    <End Role="User" Type="WebApp1EFM.Store.Users" Multiplicity="1" />
+    <End Role="Profile" Type="WebApp1EFM.Store.Profiles" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserIdentifier" />
+      </Principal>
+      <Dependent Role="Profile">
+        <PropertyRef Name="UserIdentifier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleUser_Role">
+    <End Role="Role" Type="WebApp1EFM.Store.Roles" Multiplicity="1" />
+    <End Role="RoleUser" Type="WebApp1EFM.Store.RoleUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleUser">
+        <PropertyRef Name="Roles_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleUser_User">
+    <End Role="RoleUser" Type="WebApp1EFM.Store.RoleUser" Multiplicity="*" />
+    <End Role="User" Type="WebApp1EFM.Store.Users" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserIdentifier" />
+      </Principal>
+      <Dependent Role="RoleUser">
+        <PropertyRef Name="Users_UserIdentifier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
