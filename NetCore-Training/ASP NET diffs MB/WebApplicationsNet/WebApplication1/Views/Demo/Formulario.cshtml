@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Formulario";
+}
+
+<h2>Favor de proporcionar los datos solicitados</h2>
+
+@using (Html.BeginForm("Index", "Demo"))
+{
+    <p>
+        <label>Id Producto</label>
+        <input type="text" id="productsId" name="products.Id" placeholder="Introducir tu id producto" />
+    </p>
+    <p>
+        <label>Id</label>
+        <input type="text" id="Id" name="Id" placeholder="Introducir tu id" />
+    </p>
+    <p>
+        <label>Nombre Usuario</label>
+        <input type="text" id="userName" name="user.Name" placeholder="Introducir tu nombre de usuario" />
+    </p>
+    <p>
+        <label>Nombre Producto</label>
+        <input type="text" id="productsName" name="products.Name" placeholder="Introducir tu nombre de producto" />
+    </p>
+    <p>
+        <label>Id Proveedor</label>
+        <input type="text" id="productsVendorId" name="products.VendorId" placeholder="Introducir el id de proveedor" />
+    </p>
+    <input type="submit" value="Enviar info" />
+    <input id="btnEnviarInfo" type="button" value="Enviar info (con ajax)"/>
+}
+
+@section scripts{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#btnEnviarInfo').click(function () {
+                $.ajax({
+                    url: '/Demo/Index/3012',
+                    method: 'post',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify({
+                        'user': {
+                            'name': $('#userName').val()
+                        },
+                        'products': {
+                            'name': $('#productsName').val(),
+                            'vendorid': $('#productsVendorId').val(),
+                            'id': $('#productsId').val(),
+                        },
+                        'id': '300'
+                    }),
+                    success: function () {
+                        alert('Petición recibida y procesada exitosamente');
+                    },
+                    error: function () {
+                        alert('Petición erronea');
+                    }
+                });
+            });
+        });
+    </script>
+    }
+
