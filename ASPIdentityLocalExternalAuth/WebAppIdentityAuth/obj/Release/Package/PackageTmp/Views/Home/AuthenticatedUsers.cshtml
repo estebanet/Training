@@ -1,6 +1,9 @@
 ﻿
+@using Microsoft.Owin.Security
 @{
-    Layout = null;
+                /**/
+
+                Layout = null;
 }
 
 <!DOCTYPE html>
@@ -25,7 +28,22 @@
     <div class="container">
         <div class="jumbotron">
             <h2>P&aacute;gina para usuarios autenticados y autorizados.</h2>
-            <p>Acceso a recurso restringido.</p>
+        </div>
+        <div>
+            <h2>¡Enlaza tu cuenta con tus redes sociales favoritas!</h2>
+            @using (Html.BeginForm("ExternalLogin", "Account"))
+            {
+                @Html.AntiForgeryToken();
+
+                foreach (var authProvider in Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes())
+                {
+                    <p>
+                        <input type="submit" id="@authProvider.AuthenticationType"
+                              name="externalProvider"
+                              class="btn btn-info" value="Inicia sesión con @authProvider.AuthenticationType">
+                    </p>
+                }
+            }
         </div>
     </div>
 </body>

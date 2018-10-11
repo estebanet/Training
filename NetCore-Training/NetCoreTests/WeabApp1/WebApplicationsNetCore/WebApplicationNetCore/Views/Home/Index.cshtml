@@ -1,0 +1,31 @@
+﻿@section styles{
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    }
+@section scripts{
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+}
+
+@functions{
+    public string Saludo(string name)
+    {
+        return string.Concat("Hello ", name , 
+            " from ASP .NET Core MVC!");
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="text-align:center">
+            <h3>@Saludo("Esteban GaRo")</h3>
+        </div>
+    </div>
+</div>
+
