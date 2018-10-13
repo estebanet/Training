@@ -1,0 +1,6 @@
+C:\Users\Desarrollo2\Documents\GitHub\Training\NetCore-Training\ASP NET diffs MB\WebApplicationsNet\Shared\bin\Debug\Shared.dll
+C:\Users\Desarrollo2\Documents\GitHub\Training\NetCore-Training\ASP NET diffs MB\WebApplicationsNet\Shared\bin\Debug\Shared.pdb
+C:\Users\Desarrollo2\Documents\GitHub\Training\NetCore-Training\ASP NET diffs MB\WebApplicationsNet\Shared\obj\Debug\Shared.csprojAssemblyReference.cache
+C:\Users\Desarrollo2\Documents\GitHub\Training\NetCore-Training\ASP NET diffs MB\WebApplicationsNet\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+C:\Users\Desarrollo2\Documents\GitHub\Training\NetCore-Training\ASP NET diffs MB\WebApplicationsNet\Shared\obj\Debug\Shared.dll
+C:\Users\Desarrollo2\Documents\GitHub\Training\NetCore-Training\ASP NET diffs MB\WebApplicationsNet\Shared\obj\Debug\Shared.pdb
